@@ -1,8 +1,7 @@
 $(document).ready(function() {
   $('#tweettextarea').on('input', function() {
     const tweetValLength = $(this).val().length;
-    const buttonVal = 140; 
-    $(this).siblings("#footertweet").children('.counter').text(buttonVal - tweetValLength);
+    $(this).siblings("#footertweet").children('.counter').text(140 - tweetValLength);
     if (140 - tweetValLength < 0) {
       $(this).siblings().children('.counter').css("color", "red");
     } else {
