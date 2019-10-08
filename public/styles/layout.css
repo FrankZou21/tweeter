@@ -16,7 +16,7 @@ html {
 
 body {
   color: #FFFF;
-  background-color: #88b85c;
+  background-color: beige;
   font-size: 24px;
   font-family: "sans-serif";
 }
@@ -28,7 +28,7 @@ body {
  main {
   width: 90%;
   margin: auto;
-  background-color: #88b85c;
+  background-color: beige;
   position: relative;
 
  }

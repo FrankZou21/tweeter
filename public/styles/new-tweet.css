@@ -1,0 +1,33 @@
+.new-tweet {
+  width: 100%;
+  position: relative;
+  background-color: beige;
+  color: black;
+}
+
+.button {
+  background-color: #003399;
+  color: white;
+  font-weight: bold;
+}
+
+#posttweet {
+  display: flex;
+  flex-direction: column;
+}
+
+#footertweet {
+  margin-block-start: 0.83em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+textarea {
+  background-color: beige;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid black 5px;
+}
