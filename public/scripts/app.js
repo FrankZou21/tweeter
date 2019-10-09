@@ -28,6 +28,13 @@ const data = [
   }
 ]
 
+//Calculate time between tweet and current time
+const calculateTime = function(milliseconds) {
+  const today = new Date();
+  console.log((today.getTime() - milliseconds));
+  return `${Math.floor(((((today.getTime() - milliseconds) / 1000) / 60) / 60) / 24)} days ago`
+}
+
 const renderTweets = function(tweets) {
 // loops through tweets
 // calls createTweetElement for each tweet
@@ -50,7 +57,7 @@ $tweet.append(`
 <p id="tweetoutput">${tweet.content.text}</p>
 
 <footer id="tweetfooter">
-<span>${tweet.created_at}</span>
+<span>${calculateTime(tweet.created_at)}</span>
 <span id="iconfooter">
   <i class="fas fa-flag"></i>
   <i class="fas fa-retweet"></i>
