@@ -53,16 +53,23 @@ const loadTweets = function() {
 }
 
 //form submission
-
   const $tweet = $("#posttweet");
   $tweet.on('submit', function (event) {
+    const message = ($tweet.children("#tweettextarea").val());
     event.preventDefault() 
-    console.log('Button clicked, performing ajax call...');
-    $.ajax({ url: "/tweets", method: "POST", data: $tweet.serialize()})
-    .then(function () {
+    if (message === "") {
+      alert("No message")
       loadTweets();
-      console.log("it worked????");
-    });
+    } else if (message.length > 140){
+      alert("Message too long")
+      loadTweets();
+    } else {
+      console.log('Button clicked, performing ajax call...');
+      $.ajax({ url: "/tweets", method: "POST", data: $tweet.serialize()})
+      .then(function () {
+        loadTweets();
+      });
+    }
   });
 
 
