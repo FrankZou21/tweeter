@@ -18,7 +18,7 @@ const calculateTime = function(milliseconds) {
 const renderTweets = function(tweets) {
   $('#tweetcontainer').empty();
   for (const tweet of tweets) {
-    $('#tweetcontainer').append(createTweetElement(tweet));
+    $('#tweetcontainer').prepend(createTweetElement(tweet));
   }
 }
 
