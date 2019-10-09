@@ -11,6 +11,7 @@ nav {
   z-index: 3;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #logo {
@@ -20,4 +21,14 @@ nav {
 
 #tweet {
   font-size: 20px;
+}
+
+i[class='fas fa-chevron-down'] {
+  color: orange;
+}
+
+#headernewtweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
