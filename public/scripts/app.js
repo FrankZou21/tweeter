@@ -32,7 +32,7 @@ $tweet.append(`
   </span>
   <span id="atsign">${tweet.user.handle}</span>
 </span>       
-<p id="tweetoutput">${tweet.content.text}</p>
+<p id="tweetoutput">${escape(tweet.content.text)}</p>
 <footer id="tweetfooter">
   <span>${calculateTime(tweet.created_at)}</span>
   <span id="iconfooter">
@@ -52,11 +52,17 @@ const loadTweets = function() {
   })
 }
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 //form submission
   const $tweet = $("#posttweet");
   $tweet.on('submit', function (event) {
-    const message = ($tweet.children("#tweettextarea").val());
-    event.preventDefault() 
+    event.preventDefault();
+    let message = ($tweet.children("#tweettextarea").val());;
     if (message === "") {
       alert("No message")
       loadTweets();
