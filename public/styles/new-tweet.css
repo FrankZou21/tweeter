@@ -47,6 +47,10 @@ article:hover #atsign {
   color: #A8A8A8;
 }
 
+article:hover #iconfooter {
+  color: blue;
+} 
+
 #tweetoutput {
   width: 100%;
   padding:0.83em;
@@ -77,11 +81,15 @@ article:hover #atsign {
   justify-content: space-between;
 }
 
-#iconfooter {
-  color:blue;
+.hidetweet {
+  display: none;
 }
 
-.alert{
+#iconfooter {
+  color: transparent;
+}
+
+.alert {
   color: #D8000C;
   background-color: #FFBABA;
   background-image: url('https://i.imgur.com/GnyDvKN.png');

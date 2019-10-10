@@ -84,11 +84,11 @@ $tweet.on('submit', function (event) {
     $.ajax({ url: "/tweets", method: "POST", data: $tweet.serialize()})
     .then(function () {
       $("form").trigger("reset");
+      $('.counter').text(140);
       loadTweets();
     });
   }
 });
-
 
 loadTweets();
 

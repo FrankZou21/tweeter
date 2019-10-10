@@ -13,5 +13,6 @@ header {
 
 
 #name {
-margin-block-start: 0em;
+  margin-block-start: 0em;
+  font-weight: normal;
 }

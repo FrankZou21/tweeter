@@ -33,3 +33,23 @@ body {
   position: relative;
   z-index: 1;
  }
+
+ /* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .headerimage {
+    width: 25%;
+    float: left;
+    margin: 40px;
+    margin-top:170px;
+  }
+  .container {
+    width: 50%;
+    float: right;
+    margin: 40px;
+    margin-top:130px;
+  }
+  .navclass {
+    background-color: #4056A1;
+    background-image: none;
+  }
+}
