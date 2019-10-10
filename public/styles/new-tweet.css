@@ -80,3 +80,19 @@ article:hover #atsign {
 #iconfooter {
   color:blue;
 }
+
+.alert{
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+  background-repeat: no-repeat;
+}
+
+/* .clicktransform {
+  transform: translateY(-235px);
+   -webkit-transition: transform 1s ease-in-out; 
+} */
+
+.errormsg {
+  transform: translateY(35px);
+}

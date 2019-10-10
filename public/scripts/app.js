@@ -59,25 +59,36 @@ const escape =  function(str) {
   return div.innerHTML;
 }
 
-//form submission
-  const $tweet = $("#posttweet");
-  $tweet.on('submit', function (event) {
-    event.preventDefault();
-    let message = ($tweet.children("#tweettextarea").val());;
-    if (message === "") {
-      alert("No message")
-      loadTweets();
-    } else if (message.length > 140){
-      alert("Message too long")
-      loadTweets();
+// $click.on("click", function() {
+  //     $("main").toggleClass("clicktransform");
+  // })  
+const $click = $(`i[class='fas fa-chevron-down']`);
+$click.on("click", function() {
+  $(".hidetweet").slideToggle('slow', () => {$("#tweettextarea").select();})
+})
+
+// form submission
+const $tweet = $("#posttweet");
+$tweet.on('submit', function (event) {
+  event.preventDefault();
+  let message = ($tweet.children("#tweettextarea").val());;
+  if (message === "" || message.length > 140) {
+    if ($("main").hasClass("errormsg")) {
+      $("main").removeClass("errormsg").delay(600).queue(function(){
+        $("main").addClass("errormsg").dequeue();
+    });
     } else {
-      console.log('Button clicked, performing ajax call...');
-      $.ajax({ url: "/tweets", method: "POST", data: $tweet.serialize()})
-      .then(function () {
-        loadTweets();
-      });
+      $("main").addClass("errormsg");
     }
-  });
+  } else {
+    console.log('Button clicked, performing ajax call...');
+    $("main").removeClass("errormsg");
+    $.ajax({ url: "/tweets", method: "POST", data: $tweet.serialize()})
+    .then(function () {
+      loadTweets();
+    });
+  }
+});
 
 
 loadTweets();
