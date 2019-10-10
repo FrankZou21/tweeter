@@ -32,6 +32,4 @@ body {
   background-color: beige;
   position: relative;
   z-index: 1;
-  transform: translateY(-35px);
-  transition: 600ms;
  }

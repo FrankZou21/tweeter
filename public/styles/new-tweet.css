@@ -86,13 +86,13 @@ article:hover #atsign {
   background-color: #FFBABA;
   background-image: url('https://i.imgur.com/GnyDvKN.png');
   background-repeat: no-repeat;
+  display: none;
 }
 
-/* .clicktransform {
-  transform: translateY(-235px);
-   -webkit-transition: transform 1s ease-in-out; 
-} */
-
-.errormsg {
-  transform: translateY(35px);
+.alert2{
+  color: #D8000C;
+  background-color: #FFBABA;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+  background-repeat: no-repeat;
+  display: none;
 }

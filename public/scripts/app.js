@@ -59,9 +59,6 @@ const escape =  function(str) {
   return div.innerHTML;
 }
 
-// $click.on("click", function() {
-  //     $("main").toggleClass("clicktransform");
-  // })  
 const $click = $(`i[class='fas fa-chevron-down']`);
 $click.on("click", function() {
   $(".hidetweet").slideToggle('slow', () => {$("#tweettextarea").select();})
@@ -72,19 +69,21 @@ const $tweet = $("#posttweet");
 $tweet.on('submit', function (event) {
   event.preventDefault();
   let message = ($tweet.children("#tweettextarea").val());;
-  if (message === "" || message.length > 140) {
-    if ($("main").hasClass("errormsg")) {
-      $("main").removeClass("errormsg").delay(600).queue(function(){
-        $("main").addClass("errormsg").dequeue();
-    });
-    } else {
-      $("main").addClass("errormsg");
-    }
+  if (message === "") {
+    $(".alert").hide(600)
+    $(".alert2").hide(600)
+    $(".alert").show(600)
+  } else if (message.length > 140) {
+    $(".alert").hide(600)
+    $(".alert2").hide(600)
+    $(".alert2").show(600)
   } else {
     console.log('Button clicked, performing ajax call...');
-    $("main").removeClass("errormsg");
+    $(".alert").hide(600)
+    $(".alert2").hide(600)
     $.ajax({ url: "/tweets", method: "POST", data: $tweet.serialize()})
     .then(function () {
+      $("form").trigger("reset");
       loadTweets();
     });
   }
