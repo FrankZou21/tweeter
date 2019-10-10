@@ -16,8 +16,8 @@ Making use of front end skills such as HTML, CSS, JS, jQuery and AJAX along with
 
 ## Screenshots
 
-!["Screenshot of Tweeter home page"]https://github.com/FrankZou21/tweeter/blob/master/docs/Tweeter-Main-Page.png?raw=true
-!["Screenshot of newly created tweets"]https://github.com/FrankZou21/tweeter/blob/master/docs/New-Tweets.png?raw=true
-!["Screenshot of composing a tweet"]https://github.com/FrankZou21/tweeter/blob/master/docs/Composing-Tweet.png?raw=true
-!["Screenshot of an error while composing tweet"]https://github.com/FrankZou21/tweeter/blob/master/docs/Compose-Tweet-Error.png?raw=true
+!["Screenshot of Tweeter home page"](https://github.com/FrankZou21/tweeter/blob/master/docs/Tweeter-Main-Page.png?raw=true)
+!["Screenshot of newly created tweets"](https://github.com/FrankZou21/tweeter/blob/master/docs/New-Tweets.png?raw=true)
+!["Screenshot of composing a tweet"](https://github.com/FrankZou21/tweeter/blob/master/docs/Composing-Tweet.png?raw=true)
+!["Screenshot of an error while composing tweet"](https://github.com/FrankZou21/tweeter/blob/master/docs/Compose-Tweet-Error.png?raw=true)
 
