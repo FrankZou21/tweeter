@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Making use of front end skills such as HTML, CSS, JS, jQuery and AJAX along with back end tools such as Node, Express and MongoDB to create a simple, single-page Twitter clone.
+Making use of front end skills such as HTML, CSS, JS, jQuery and AJAX along with back end tools such as Node, Express and MongoDB to create a simple, single-page Twitter clone. This project was originally forked from lighthouse labs with the server premade.
 
 ## Getting Started
 
